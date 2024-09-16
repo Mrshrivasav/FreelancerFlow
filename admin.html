@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Profile Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            background-color: #f3c612;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .profiles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .profile-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+        .profile-card:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .profile-card h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .profile-card p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #f3c612;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin - Profile Management</h1>
+    </header>
+
+    <div class="container">
+        <h2>Submitted Profiles</h2>
+        <div class="profiles" id="profiles"></div>
+    </div>
+
+    <footer>
+        <p>MetaAgency © 2024. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to fetch profiles and display them
+        async function fetchProfiles() {
+            try {
+                const response = await fetch('/get-profiles');
+                const data = await response.json();
+
+                const profilesContainer = document.getElementById('profiles');
+                profilesContainer.innerHTML = '';
+
+                data.forEach(profile => {
+                    const profileCard = `
+                        <div class="profile-card">
+                            <img src="${profile.profilePicURL}" alt="${profile.name}">
+                            <h3>${profile.name}</h3>
+                            <p>Role: ${profile.role}</p>
+                            <p>Skills: ${profile.skills}</p>
+                            <p>Requirements: ${profile.requirements}</p>
+                        </div>
+                    `;
+                    profilesContainer.innerHTML += profileCard;
+                });
+            } catch (error) {
+                console.error('Error fetching profiles:', error);
+            }
+        }
+
+        // Call the fetchProfiles function when the page loads
+        window.onload = fetchProfiles;
+    </script>
+</body>
+</html>
