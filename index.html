@@ -245,19 +245,99 @@
 								freelancers.
 
 
-							<div class="header-button" data-aos="fade-right" data-aos-duration="2000">
+							<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Buttons Example</title>
+    <style>
+        /* Common Neon Button Styles */
+        .neon-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: black; /* Black background inside the button */
+            border: 2px solid #ff1493; /* Pink border for "Join Now" */
+            border-radius: 30px; /* Rounded corners for the neon effect */
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            font-family: Arial, sans-serif; /* Set default font */
+            margin: 0 10px; /* Add margin between buttons */
+        }
 
-								<a href="https://discord.gg/PZr2EkKs" target="_blank" class="btn btn-common">
-									<i class="fa fa-brands fa-discord"></i>
-									Join
+        .neon-button:hover {
+            background-color: #333; /* Darker black background on hover */
+        }
 
-									Now</i></a>
-								<a href="#about" class="btn btn-outline-warning btn-common video-popup">
-									<i class=" fa fa-sharp fa-solid fa-graduation-cap"></i>Learn
-									More</i></a>
-							</div>
+        .neon-button:before, .neon-button:after {
+            content: "";
+            position: absolute;
+            border-radius: 30px;
+            border: 2px solid #ff1493;
+            z-index: -1;
+        }
 
+        .neon-button:before {
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            filter: blur(10px);
+            opacity: 0.7;
+        }
 
+        .neon-button:after {
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            filter: blur(20px);
+            opacity: 0.5;
+        }
+
+        /* Custom Color for the Discord Button */
+        .discord-button {
+            border-color: #7289da; /* Discord color for the border */
+        }
+
+        .discord-button:before, .discord-button:after {
+            border-color: #7289da; /* Same Discord color for the neon effect */
+        }
+
+        .neon-button i {
+            margin-right: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Replace this div -->
+    <div class="header-button" data-aos="fade-right" data-aos-duration="2000">
+
+        <!-- Join Now Button (Discord) -->
+        <a href="https://discord.gg/PZr2EkKs" target="_blank" class="neon-button discord-button">
+            <i class="fa fa-brands fa-discord"></i> Join Now
+        </a>
+
+        <!-- Dev Portfolio Button -->
+        <a href="#about" class="neon-button">
+            <i class="fa fa-sharp fa-solid fa-graduation-cap"></i> Dev Portfolio
+        </a>
+    </div>
+
+    <br>
+    <p>Join the community on Instagram for interaction with hirers and freelancers from all over India.</p>
+    <br>
+
+</body>
+</html>
 							<br>Join the community on instagram for interaction with hirers and freelancers from all
 							over India.
 
