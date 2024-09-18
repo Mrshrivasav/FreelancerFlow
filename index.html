@@ -691,7 +691,94 @@
 	</div>
 	<!-- About Section End -->
 
-			<!-- Testimonial Section Start -->
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Team Section with Neon Effect</title>
+		<style>
+			/* Ensure the container for the team cards has a white background */
+			.testimonial {
+				background-color: white;
+				padding: 50px 0;
+			}
+	
+			/* Neon border effect for the team member cards */
+			.testimonial-item {
+				background-color: white;
+				padding: 20px;
+				border-radius: 15px;
+				border: 3px solid transparent; /* Border will be updated by animation */
+				box-shadow: 0 0 15px rgba(255, 105, 180, 0.7); /* Initial pink glow */
+				position: relative;
+				overflow: hidden; /* To make sure the effect stays inside the box */
+				animation: neonBorder 2s ease-in-out infinite alternate; /* Neon glow animation */
+				text-align: center;
+			}
+	
+			/* Keyframes for neon border animation */
+			@keyframes neonBorder {
+				0% {
+					border-color: pink;
+					box-shadow: 0 0 10px pink, 0 0 20px pink, 0 0 30px pink, 0 0 40px pink;
+				}
+				100% {
+					border-color: white;
+					box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;
+				}
+			}
+	
+			/* Add hover effect for extra glow on hover */
+			.testimonial-item:hover {
+				box-shadow: 0 0 20px rgba(255, 105, 180, 1), 0 0 30px rgba(255, 105, 180, 1), 0 0 40px rgba(255, 105, 180, 1);
+				transition: box-shadow 0.3s ease-in-out;
+			}
+	
+			/* Image styling inside the team member card */
+			.testimonial-item .img-thumb img {
+				border-radius: 50%;
+				width: 150px;
+				height: 150px;
+				object-fit: cover;
+				box-shadow: 0 0 10px rgba(255, 105, 180, 0.8); /* Subtle glow around images */
+			}
+	
+			.testimonial-item .info {
+				margin-top: 15px;
+			}
+	
+			.testimonial-item h2 {
+				font-size: 20px;
+				margin-bottom: 5px;
+			}
+	
+			.testimonial-item h3 {
+				font-size: 16px;
+				color: gray;
+			}
+	
+			.media-icons a {
+				color: #333;
+				margin: 0 10px;
+				font-size: 18px;
+				transition: color 0.3s;
+			}
+	
+			.media-icons a:hover {
+				color: #ff69b4; /* Pink color on hover */
+			}
+	
+			.section-header h2 {
+				font-size: 36px;
+				color: #333;
+				margin-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<!-- Testimonial Section Start -->
 		<section id="testimonial" class="testimonial section-padding">
 			<div class="section-header text-center" data-aos="fade-up" data-aos-duration="1500">
 				<h2 class="h2w section-title wow fadeInDown" data-wow-delay="0.3s">Meet Our Core Team</h2>
@@ -1663,6 +1750,52 @@
 	
 	</body>
 	</html>
+
+
+	</section>
+	<!-------------Founder Team------------->
+	<section id="testimonial" class="testimonial-community section-padding">
+		<div class="section-header text-center" data-aos="fade-up" data-aos-duration="1500">
+			<h2 class="section-title wow fadeInDown text_dark" data-wow-delay="0.3s">Founding Members</h2>
+			<div class="shape-testimonial wow fadeInDown" data-wow-delay="0.3s"></div>
+		</div>
+
+		<div class="container-fluid" data-aos="fade-up" data-aos-duration="1500">
+			<div class="row row-founders" style="width:80%; margin:0 auto;">
+
+				<div class="testimonial-item founder-item col-lg-3 col-md-4 col-sm-12">
+					<div class="img-thumb">
+						<img src="./assets/img/team/HeroImage.jpg" alt="">
+					</div>
+					<div class="info">
+						<h2 class="text_dark">Aman Shrivastav</h2>
+						<h3>Founder</h3>
+					</div>
+
+					<div class="media-icons">
+						<a href="https://github.com/Mrshrivasav" target="_blank"><i class="fab fa-github"></i></a>
+						<a href="https://www.linkedin.com/in/sauravmukherjee44" target="_blank"><i
+								class="fab fa-linkedin"></i></a>
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+
+
+
+
+		</div>
+		</div>
+
+	</section>
+
+
+
+
+
 	<!-- Testimonial Section End -->
 
 	<!-- events section starts -->
