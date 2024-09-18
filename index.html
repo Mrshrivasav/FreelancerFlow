@@ -356,113 +356,231 @@
 				<div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
 			</div>
 			<div class="row">
-				<!-- Services Section -->
-<section id="services" class="section">
-    <div class="container">
-        <div class="row">
-            <!-- Services item for Discord -->
-            <div class="col-md-6 col-lg-4 col-xs-12" data-aos="fade-up" data-aos-duration="1500">
-                <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
-                    <div class="icon">
-                        <a href="https://discord.gg/PZr2EkKs" target="_blank">
-                            <i class="fab fa-discord" style="color:#7289d9;" onmouseover="this.style.color='white'"
-                                onmouseout="this.style.color='#7289d9'"></i>
-                        </a>
-                    </div>
-                    <div class="services-content">
-                        <h3><a href="https://discord.gg/PZr2EkKs">Discord Server</a></h3>
-                        <p>Join in the discord community and connect with like-minded people across the country.</p>
-                    </div>
-                </div>
-            </div>
+		<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Section with Neon Effect</title>
+    <style>
+        /* Neon Effect for Services */
+        .services-item {
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid transparent; /* Border will be transparent initially */
+            border-radius: 10px;
+            background-color: white; /* Background color for the services item */
+            position: relative;
+            color: black; /* Text color */
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.6); /* Default pink glow */
+        }
 
-            <!-- Services item for Instagram -->
-            <div class="col-md-6 col-lg-4 col-xs-12" data-aos="fade-up" data-aos-duration="1500">
-                <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
-                    <div class="icon">
-                        <a href="https://ig.me/j/AbZfRfTUXy0K4KzU/" target="_blank">
-                            <i class="fab fa-instagram" style="color:#E1306C;" onmouseover="this.style.color='white'"
-                                onmouseout="this.style.color='#E1306C'"></i>
-                        </a>
-                    </div>
-                    <div class="services-content">
-                        <h3><a href="https://ig.me/j/AbZfRfTUXy0K4KzU/">Instagram Group</a></h3>
-                        <p>Join our FreelancerFlow Instagram group to connect with freelancers seeking online work-from-home
-                            opportunities. Stay updated on the latest job openings, collaborations, and freelance gigs.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        .services-item:hover {
+            background-color: #f0f0f0; /* Slightly darker white background on hover */
+            box-shadow: 0 0 25px rgba(255, 20, 147, 0.8); /* Stronger pink glow on hover */
+        }
 
-            <!-- Services item for LinkedIn -->
-            <div class="col-md-6 col-lg-4 col-xs-12" data-aos="fade-up" data-aos-duration="1500">
-                <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
-                    <div class="icon">
-                        <a href="https://www.linkedin.com/in/mr-diggaj-ab6740277/" target="_blank">
-                            <i class="fab fa-linkedin" style="color: #0A66C2;" onmouseover="this.style.color='white'"
-                                onmouseout="this.style.color='#0A66C2'"></i>
-                        </a>
-                    </div>
-                    <div class="services-content">
-                        <h3><a href="https://www.linkedin.com/in/mr-diggaj-ab6740277/">LinkedIn Page</a></h3>
-                        <p>Follow the official page of FreelancerFlow where we regularly post about all the upcoming
-                            workshops and events.</p>
-                    </div>
-                </div>
-            </div>
+        .services-item:before, .services-item:after {
+            content: "";
+            position: absolute;
+            border-radius: 10px;
+            border: 2px solid; /* Will take the border color */
+            z-index: -1;
+        }
 
-            <!-- Services item for GitHub -->
-            <div class="col-md-6 col-lg-4 col-xs-12" data-aos="fade-up" data-aos-duration="1500">
-                <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
-                    <div class="icon">
-                        <a href="https://github.com/Mrshrivasav" target="_blank">
-                            <i class="fab fa-github" style="color:#171515;" onmouseover="this.style.color='white'"
-                                onmouseout="this.style.color='#171515'"></i>
-                        </a>
-                    </div>
-                    <div class="services-content">
-                        <h3><a href="https://github.com/Mrshrivasav">Open Source Project</a></h3>
-                        <p>This is the GitHub repository of FreelancerFlow Website built using HTML, CSS, and
-                            JavaScript, and is Open Source.</p>
-                    </div>
-                </div>
-            </div>
+        .services-item:before {
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            filter: blur(10px);
+            opacity: 0.7;
+        }
 
-            <!-- Services item for Twitter -->
-            <div class="col-md-6 col-lg-4 col-xs-12" data-aos="fade-up" data-aos-duration="1500">
-                <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
-                    <div class="icon">
-                        <a href="https://x.com/Amanshrivastavv" target="_blank">
-                            <i class="fab fa-twitter" style="color: #1DA1F2;" onmouseover="this.style.color='white'"
-                                onmouseout="this.style.color='#1DA1F2'"></i>
-                        </a>
-                    </div>
-                    <div class="services-content">
-                        <h3><a href="https://x.com/Amanshrivastavv">Twitter</a></h3>
-                        <p>Follow the official Twitter Page of the FreelancerFlow and stay updated.</p>
-                    </div>
-                </div>
-            </div>
+        .services-item:after {
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            filter: blur(20px);
+            opacity: 0.5;
+        }
 
-            <!-- Services item for YouTube -->
-            <div class="col-md-6 col-lg-4 col-xs-12" data-aos="fade-up" data-aos-duration="1500">
-                <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
-                    <div class="icon">
-                        <a href="https://www.youtube.com/@FreelancerFlow" target="_blank">
-                            <i class="fab fa-youtube" style="color:#FF0000;" onmouseover="this.style.color='white'"
-                                onmouseout="this.style.color='#FF0000'"></i>
-                        </a>
-                    </div>
-                    <div class="services-content">
-                        <h3><a href="https://www.youtube.com/@FreelancerFlow">YouTube Content</a></h3>
-                        <p>Subscribe to the YouTube channel to not miss any upcoming webinar, tech events, and
-                            workshops.</p>
+        /* Custom Neon Colors for Each Service Icon */
+        .discord-service .services-item {
+            box-shadow: 0 0 15px rgba(114, 137, 218, 0.6); /* Discord color for the glow */
+        }
+
+        .discord-service .services-item:before, .discord-service .services-item:after {
+            border-color: #7289da; /* Neon glow for Discord */
+        }
+
+        .instagram-service .services-item {
+            box-shadow: 0 0 15px rgba(225, 48, 108, 0.6); /* Instagram color for the glow */
+        }
+
+        .instagram-service .services-item:before, .instagram-service .services-item:after {
+            border-color: #E1306C; /* Neon glow for Instagram */
+        }
+
+        .linkedin-service .services-item {
+            box-shadow: 0 0 15px rgba(10, 102, 194, 0.6); /* LinkedIn color for the glow */
+        }
+
+        .linkedin-service .services-item:before, .linkedin-service .services-item:after {
+            border-color: #0A66C2; /* Neon glow for LinkedIn */
+        }
+
+        .github-service .services-item {
+            box-shadow: 0 0 15px rgba(23, 21, 21, 0.6); /* GitHub color for the glow */
+        }
+
+        .github-service .services-item:before, .github-service .services-item:after {
+            border-color: #171515; /* Neon glow for GitHub */
+        }
+
+        .twitter-service .services-item {
+            box-shadow: 0 0 15px rgba(29, 161, 242, 0.6); /* Twitter color for the glow */
+        }
+
+        .twitter-service .services-item:before, .twitter-service .services-item:after {
+            border-color: #1DA1F2; /* Neon glow for Twitter */
+        }
+
+        .youtube-service .services-item {
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.6); /* YouTube color for the glow */
+        }
+
+        .youtube-service .services-item:before, .youtube-service .services-item:after {
+            border-color: #FF0000; /* Neon glow for YouTube */
+        }
+
+        .services-item i {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .services-item h3 a {
+            color: black; /* Link color */
+            text-decoration: none;
+        }
+
+        .services-item p {
+            color: #333; /* Paragraph color */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Services Section with Neon Effect -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="row">
+                
+                <!-- Services item for Discord -->
+                <div class="col-md-6 col-lg-4 col-xs-12 discord-service" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
+                        <div class="icon">
+                            <a href="https://discord.gg/PZr2EkKs" target="_blank">
+                                <i class="fab fa-discord" style="color:#7289d9;" onmouseover="this.style.color='white'"
+                                    onmouseout="this.style.color='#7289d9'"></i>
+                            </a>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="https://discord.gg/PZr2EkKs">Discord Server</a></h3>
+                            <p>Join in the discord community and connect with like-minded people across the country.</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Services item for Instagram -->
+                <div class="col-md-6 col-lg-4 col-xs-12 instagram-service" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
+                        <div class="icon">
+                            <a href="https://ig.me/j/AbZfRfTUXy0K4KzU/" target="_blank">
+                                <i class="fab fa-instagram" style="color:#E1306C;" onmouseover="this.style.color='white'"
+                                    onmouseout="this.style.color='#E1306C'"></i>
+                            </a>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="https://ig.me/j/AbZfRfTUXy0K4KzU/">Instagram Group</a></h3>
+                            <p>Join our FreelancerFlow Instagram group to connect with freelancers seeking online work-from-home opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services item for LinkedIn -->
+                <div class="col-md-6 col-lg-4 col-xs-12 linkedin-service" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
+                        <div class="icon">
+                            <a href="https://www.linkedin.com/in/mr-diggaj-ab6740277/" target="_blank">
+                                <i class="fab fa-linkedin" style="color: #0A66C2;" onmouseover="this.style.color='white'"
+                                    onmouseout="this.style.color='#0A66C2'"></i>
+                            </a>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="https://www.linkedin.com/in/mr-diggaj-ab6740277/">LinkedIn Page</a></h3>
+                            <p>Follow the official page of FreelancerFlow where we regularly post about all the upcoming workshops and events.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services item for GitHub -->
+                <div class="col-md-6 col-lg-4 col-xs-12 github-service" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
+                        <div class="icon">
+                            <a href="https://github.com/Mrshrivasav" target="_blank">
+                                <i class="fab fa-github" style="color:#171515;" onmouseover="this.style.color='white'"
+                                    onmouseout="this.style.color='#171515'"></i>
+                            </a>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="https://github.com/Mrshrivasav">Open Source Project</a></h3>
+                            <p>This is the GitHub repository of FreelancerFlow Website built using HTML, CSS, and JavaScript, and is Open Source.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services item for Twitter -->
+                <div class="col-md-6 col-lg-4 col-xs-12 twitter-service" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
+                        <div class="icon">
+                            <a href="https://twitter.com/Mr_Diggaj" target="_blank">
+                                <i class="fab fa-twitter" style="color: #1DA1F2;" onmouseover="this.style.color='white'"
+                                    onmouseout="this.style.color='#1DA1F2'"></i>
+                            </a>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="https://twitter.com/Mr_Diggaj">Twitter Profile</a></h3>
+                            <p>Follow me on Twitter for updates on new projects and content.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services item for YouTube -->
+                <div class="col-md-6 col-lg-4 col-xs-12 youtube-service" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
+                        <div class="icon">
+                            <a href="https://www.youtube.com/channel/UCr60zAlBzlm9ezid2xJe_8Q" target="_blank">
+                                <i class="fab fa-youtube" style="color: #FF0000;" onmouseover="this.style.color='white'"
+                                    onmouseout="this.style.color='#FF0000'"></i>
+                            </a>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="https://www.youtube.com/channel/UCr60zAlBzlm9ezid2xJe_8Q">YouTube Channel</a></h3>
+                            <p>Watch videos, tutorials, and guides on our YouTube Channel about how to make money online.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+</body>
+</html>
 
 	<!-- About Section start -->
 	<div id="about" class="about-area section-padding">
