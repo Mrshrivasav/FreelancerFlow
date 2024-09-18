@@ -131,102 +131,175 @@
 
 	<!-- Header Area wrapper Starts -->
 	<header id="header-wrap">
-		<!-- Navbar Start -->
-		<nav class="navbar navbar-expand-md bg-white fixed-top scrolling-navbar">
-			<div class="container nav_container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<a href="index.html" class="navbar-brand"> <img src="./assets/img/Freelancerflow.jpg"
-						alt="CodeIN-Community-Website logo"></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-					aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="lni-menu"></i>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarCollapse">
-					<ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
-						<li class="nav-item active">
-							<a class="nav-link" href="#hero-area">
-								Home
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#about">
-								About
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#testimonials">
-								Team
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#events">
-								Events
-							</a>
-						</li>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Neon Effect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+    <style>
+        /* Neon Effect for Navbar Buttons */
+        .navbar-nav .nav-link {
+            position: relative;
+            padding: 10px 20px;
+            color: white; /* Text color */
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            background-color: transparent; /* Transparent background for neon effect */
+        }
 
-						<li class="nav-item">
-							<a class="nav-link" href="#opportunity">
-								Opportunity
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#blog">
-								Blogs
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="Comming soon">
-								Giveaways
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#FAQs">
-								FAQs
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#contact">
-								Contact
-							</a>
-						</li>
-						<li class="nav-item">
+        .navbar-nav .nav-link::before, 
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 5px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.8;
+        }
 
+        .navbar-nav .nav-link::before {
+            border: 2px solid #ff007a; /* Default neon pink border */
+            box-shadow: 0 0 10px rgba(255, 0, 122, 0.6);
+        }
 
-							<a class="nav-link btn btn-outline-warning rounded px-3" id="joinus"
-								href="https://codeincommunity.tech/#joinushere" style="background-color:none ;">
+        .navbar-nav .nav-link::after {
+            border: 2px solid #ff007a; /* Default neon pink border */
+            box-shadow: 0 0 15px rgba(255, 0, 122, 0.4);
+        }
 
+        .navbar-nav .nav-link:hover {
+            color: #ff007a; /* Neon pink text color on hover */
+        }
 
-								Join Us
-							</a>
-						</li>
+        .navbar-nav .nav-link:hover::before, 
+        .navbar-nav .nav-link:hover::after {
+            border-color: #ff007a; /* Neon pink border on hover */
+            box-shadow: 0 0 20px rgba(255, 0, 122, 0.8);
+        }
 
-						<div class="dropdown nav-item">
-							<button class="nav-link btn btn-outline-warning rounded px-3 dropbtn" id="moreDetails">More
-								Options
-								<i class="fa fa-caret-down"></i>
-							</button>
-							<div class="dropdown-content">
-								<a id="hacktoberfest" target="_blank" href="comming soon">
-									Buy cheap tech products
-								</a>
-								<a id="hacktoberfest" target="_blank" href="comming soon">
-									Buy cheap fashion and beauty products
-								</a>
-								<a id="hacktoberfest" target="_blank" href="comming soon">
-									Mental Health Club
-								</a>
-							</div>
-						</div>
+        .navbar-nav .btn-outline-warning {
+            position: relative;
+            padding: 10px 20px;
+            color: #ff007a; /* Neon pink text color */
+            border: 2px solid #ff007a; /* Neon pink border */
+            background-color: transparent; /* Transparent background */
+            transition: all 0.3s ease-in-out;
+            font-weight: bold;
+        }
 
+        .navbar-nav .btn-outline-warning::before, 
+        .navbar-nav .btn-outline-warning::after {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 5px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.8;
+        }
 
-						<li class="nav-item">
+        .navbar-nav .btn-outline-warning::before {
+            border: 2px solid #ff007a; /* Default neon pink border */
+            box-shadow: 0 0 10px rgba(255, 0, 122, 0.6);
+        }
 
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<!-- Navbar End -->
+        .navbar-nav .btn-outline-warning::after {
+            border: 2px solid #ff007a; /* Default neon pink border */
+            box-shadow: 0 0 15px rgba(255, 0, 122, 0.4);
+        }
+
+        .navbar-nav .btn-outline-warning:hover {
+            color: white; /* White text color on hover */
+            background-color: #ff007a; /* Neon pink background on hover */
+            border-color: #ff007a; /* Neon pink border on hover */
+        }
+
+        .navbar-nav .btn-outline-warning:hover::before, 
+        .navbar-nav .btn-outline-warning:hover::after {
+            border-color: #ff007a; /* Neon pink border on hover */
+            box-shadow: 0 0 20px rgba(255, 0, 122, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top scrolling-navbar">
+        <div class="container nav_container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a href="index.html" class="navbar-brand"> 
+                <img src="./assets/img/Freelancerflow.jpg" alt="FreelancerFlow logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="lni-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#hero-area">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#opportunity">Opportunity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Comming soon">Giveaways</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#FAQs">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-warning rounded px-3" id="joinus"
+                            href="https://codeincommunity.tech/#joinushere">Join Us</a>
+                    </li>
+                    <div class="dropdown nav-item">
+                        <button class="nav-link btn btn-outline-warning rounded px-3 dropbtn" id="moreDetails">
+                            More Options
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a id="hacktoberfest" target="_blank" href="comming soon">Buy cheap tech products</a>
+                            <a id="hacktoberfest" target="_blank" href="comming soon">Buy cheap fashion and beauty products</a>
+                            <a id="hacktoberfest" target="_blank" href="comming soon">Mental Health Club</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
 
 		<!-- Hero Area Start -->
 		<div id="hero-area" class="hero-area-bg">
