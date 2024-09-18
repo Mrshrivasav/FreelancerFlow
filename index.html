@@ -2391,42 +2391,86 @@
 	<!-- FAQs section ends	 -->
 
 	<!-- Contact Section Start -->
-	<section id="contact" class="section-padding bg-gray contactSection" data-aos="fade-up" data-aos-duration="1500">
-		<div class="text-center Contactsec">
-			<div class="section-header Contactsec text-center">
-				<h2 class="text_dark wow fadeInDown" data-wow-delay="0.3s">Contact Us</h2>
-				<div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<form class="mt-5" id="contactForm" method="post">
-						<div class="form-row">
-							<div class="form-group col-md-6 ">
-								<input type="text" class="form-control" id="inputName" placeholder="Name" required>
-							</div>
-							<div class="form-group col-md-6 ">
-								<input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-							</div>
-						</div>
-						<div class="form-group ">
-							<input type="text" class="form-control" id="subj" placeholder="Subject" required>
-						</div>
-						<div class="form-group">
-							<textarea class="form-control" id="msg" rows="5" placeholder="Your Message"
-								required></textarea>
-						<button class="Cbtn text_dark float-left" id="checkBtn" type="submit" style="background-color: black; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-							Submit
-						</button>
-						<div id="msgSubmit" class="h3 text-left hidden"></div>
-						<br><br>
-					</form>
-				</div>
-				<div class="col-md-6 text-center">
-					<img class="image-fluid bg-cont" src="/assets/img/Call_center-cuate.png">
-				</div>
-			</div>
-		</div>
-	</section>
+	<!-- Contact Section Start -->
+<section id="contact" class="section-padding bg-gray contactSection" data-aos="fade-up" data-aos-duration="1500">
+    <div class="text-center Contactsec">
+        <div class="section-header Contactsec text-center">
+            <h2 class="text_dark wow fadeInDown" data-wow-delay="0.3s">Contact Us</h2>
+            <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <form class="mt-5" id="contactForm" method="post">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="subj" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="msg" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button class="Cbtn neon-effect text_dark float-left" id="checkBtn" type="submit">
+                        Submit
+                    </button>
+                    <div id="msgSubmit" class="h3 text-left hidden"></div>
+                    <br><br>
+                </form>
+            </div>
+            <div class="col-md-6 text-center">
+                <img class="image-fluid bg-cont" src="/assets/img/Call_center-cuate.png">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section End -->
+
+<!-- Add this CSS to your stylesheet -->
+<style>
+    /* Neon effect for the Contact Us button */
+    .neon-effect {
+        position: relative;
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .neon-effect::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 105, 180, 0.5);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        transition: all 0.5s ease-in-out;
+        filter: blur(20px);
+        opacity: 0;
+    }
+
+    .neon-effect:hover {
+        box-shadow: 0 0 20px rgba(255, 105, 180, 1), 0 0 30px rgba(255, 105, 180, 1), 0 0 40px rgba(255, 105, 180, 1);
+    }
+
+    .neon-effect:hover::before {
+        opacity: 1;
+    }
+</style>
 	<!-- Contact Section End -->
 
 	<script>
