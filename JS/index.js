@@ -37,13 +37,14 @@ async function fetchProfiles() {
 // Fetch profiles on page load
 window.onload = function () {
   fetchProfiles();
+  fetchData();
 };
 
 // Existing code for fetching contributors (if needed)
 async function fetchData() {
   await fetch(
     "https://api.github.com/repos/SauravMukherjee44/CodeIN-Community-Website/contributors"
-  ) //api for the get request
+  ) // API for the get request
     .then((response) => response.json())
     .then((data) => {
       let contributors = data ?? "No contributors";
@@ -74,3 +75,28 @@ async function fetchData() {
 const d = new Date();
 let year = d.getFullYear();
 document.querySelector(".year").innerHTML = year;
+
+// Typing effect for the paragraph
+document.addEventListener("DOMContentLoaded", function() {
+    const typingElement = document.getElementById("typing-effect");
+
+    if (typingElement) { // Check if the element exists
+        const text = typingElement.getAttribute("data-text"); // Use data attribute for text
+        typingElement.textContent = ""; // Clear the original text
+
+        const words = text.split(' '); // Split the text into words
+        let index = 0;
+
+        function type() {
+            if (index < words.length) {
+                typingElement.textContent += words[index] + ' '; // Add the word with a space
+                index++;
+                setTimeout(type, 500); // Adjust the speed of word typing here
+            }
+        }
+
+        type(); // Start typing
+    } else {
+        console.error('Element with id "typing-effect" not found.');
+    }
+});
