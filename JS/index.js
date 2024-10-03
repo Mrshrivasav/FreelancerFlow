@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (index < words.length) {
                 typingElement.textContent += words[index] + ' '; // Add the word with a space
                 index++;
-                setTimeout(type, 500); // Adjust the speed of word typing here
+                setTimeout(type, 100); // Adjusted to 100ms per word for 5-second completion
             }
         }
 
