@@ -654,45 +654,148 @@
   </style>
 </head>
 <body>
-  <!-- Your existing content here -->
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Bot Form</title>
+  <style>
+    /* Existing styles for the bot */
+    #ai-bot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      cursor: pointer;
+      width: 160px; /* 2x original width */
+      height: 160px; /* 2x original height */
+      animation: upDown 2s infinite ease-in-out; /* Animation for up and down movement */
+    }
+
+    #ai-bot img {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Animation keyframes for up and down movement */
+    @keyframes upDown {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px); /* Move up */
+      }
+      100% {
+        transform: translateY(0); /* Move back down */
+      }
+    }
+
+    #ai-bot-popup {
+      display: none;
+      position: fixed;
+      bottom: 200px;
+      right: 20px;
+      background-color: #1a1a1a; /* Dark background to enhance neon effect */
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+    }
+
+    #ai-bot-popup input, #ai-bot-popup select, #ai-bot-popup textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #ai-bot-popup button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Neon Effect Styling */
+    .neon-effect {
+      border: 2px solid #00FFFF; /* Neon blue border */
+      box-shadow: 0 0 15px #00FFFF, 0 0 30px #00FFFF, 0 0 45px #00FFFF, 0 0 60px #00FFFF;
+      animation: neonPulse 1.5s infinite alternate;
+    }
+
+    /* Neon Pulse Animation */
+    @keyframes neonPulse {
+      0% {
+        box-shadow: 0 0 15px #00FFFF, 0 0 30px #00FFFF, 0 0 45px #00FFFF, 0 0 60px #00FFFF;
+      }
+      100% {
+        box-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF, 0 0 20px #00FFFF;
+      }
+    }
+  </style>
+</head>
+<body>
+
   <!-- AI Bot Button (Floating icon) -->
   <div id="ai-bot">
     <img src="download.jpeg" alt="AI Bot" id="bot-icon">
   </div>
 
-  <!-- AI Bot Popup Banner -->
+  <!-- AI Bot Popup Form -->
   <div id="ai-bot-popup">
-    <div id="banner-content">
+    <div id="form-content">
       <button id="close-banner" style="float: right;">&times;</button>
-      <img src="baigan.jpg" alt="Your Picture" style="width: 100px; height: 100px; border-radius: 50%;">
-      <h2>Aman Shrivastav</h2>
-      <p>Email: <a href="mailto:amanshriwastava0@gmail.com">amanshriwastava0@gmail.com</a></p>
-      <p>Welcome to FreelancerFlow! How can I assist you today?</p>
+      <h2>How can I help you today?</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <select id="role">
+          <option value="Freelancer">Freelancer</option>
+          <option value="Hirer">Hirer</option>
+        </select>
+        <textarea id="query" placeholder="Your query..." rows="4" required></textarea>
+        <button type="button" id="sendMail">Send</button>
+      </form>
     </div>
   </div>
 
-  <!-- Add your other existing scripts -->
+  <!-- Add your existing scripts -->
   <script>
     // Floating AI bot popup logic
     document.addEventListener("DOMContentLoaded", function() {
       const botIcon = document.getElementById("bot-icon");
       const botPopup = document.getElementById("ai-bot-popup");
       const closeBannerBtn = document.getElementById("close-banner");
+      const sendMailBtn = document.getElementById("sendMail");
 
-      // Show the popup when the bot is clicked
+      // Show the popup when the bot is clicked and apply neon effect
       botIcon.addEventListener("click", function() {
         botPopup.style.display = "block"; // Show the popup
+        botPopup.classList.add("neon-effect"); // Add neon effect
       });
 
-      // Close the popup when the close button is clicked
+      // Close the popup when the close button is clicked and remove neon effect
       closeBannerBtn.addEventListener("click", function() {
         botPopup.style.display = "none"; // Hide the popup
+        botPopup.classList.remove("neon-effect"); // Remove neon effect
+      });
+
+      // Handle the send mail button click
+      sendMailBtn.addEventListener("click", function() {
+        const name = document.getElementById("name").value;
+        const role = document.getElementById("role").value;
+        const query = document.getElementById("query").value;
+
+        // Open the user's email client
+        window.location.href = `mailto:amanshriwastava0@gmail.com?subject=Query from ${name} (${role})&body=${encodeURIComponent(query)}`;
       });
     });
   </script>
+
 </body>
 </html>
+
 
 
     <!-- Services Section with Neon Effect -->
